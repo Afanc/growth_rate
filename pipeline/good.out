@@ -1,0 +1,31 @@
+let's go !
+
+all files are here
+
+output file is res_beg_end_occ_dir.zip and paramaters are beg end occ dir
+
+step 1/7, get non_core genes
+
+step 2/7, filter out non_core genes
+
+step 3/7, create core files
+
+step 4/7, create stats files
+
+step 5/7, pca and kmeans
+
+step 6/7, correlations
+
+step 7/7, zipping everything and prepare for upload
+
+  adding: results/correlated_features.png (deflated 44%)
+  adding: results/explained_var.png (deflated 21%)
+  adding: results/features_correlations.png (deflated 34%)
+  adding: results/first_pc.csv (deflated 76%)
+  adding: results/kmeans.png (deflated 29%)
+  adding: results/pca_1_2_3_4.png (deflated 22%)
+  adding: results/pca_1_rank.png (deflated 20%)
+  adding: results/second_pc.csv (deflated 75%)
+done ! 
+res_beg_end_occ_dir.zip is ready in your home
+
