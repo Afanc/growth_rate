@@ -84,7 +84,7 @@ generate_images_wide.py does the same but differentiates between codons of diffe
 
 ## Rest
 
-there is bunch of other scripts that do similar things are pre-processing of the data. Not super pretty obviously but oh well, that's how it is.
+there is bunch of other scripts that do similar things or pre-process the data. Not super pretty obviously but oh well, that's how it is.
 
 - clean_core_genes.sh : removing some text from joined_core
 - extract_infos.pl : extract features (number of occurences) from list of core genes 
