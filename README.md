@@ -11,7 +11,7 @@ Only one example, however anyone with the skills and the motivation should be ab
 
 ## Description of the files :
 
-### Scripts/
+### scripts/
 - genbank2fasta.pl, genbank2gff3.pl, run_clustal-omaga.sh : self explanatory
 - rotate_origin.pl : rotate a sequence
 - tetra_nucl.R : takes .fa, outputs tetranucleotide distribution as a .csv
@@ -26,21 +26,58 @@ will a bunch of other scripts and generate a lot of different files...
 
 - pca_codon_usage.py
 
-![Very first results](results/pca_codon.jpg)
+![pca of codon usage](results/pca_codon.jpg)
 
+same for dicodon usage
 
-```python
-def main():
-    device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    batch_size = 25
-    n_epochs = 10
-    load_weights = "_weights_2_iteration_40000.pth"
+- GC_skew.py
 
-    train = Trainer(batch_size=batch_size, n_epochs=n_epochs, device=device,
-                    load_weights=load_weights)
+![GC skew](results/GCC.png)
 
-    train.train()
+as well as a pcoA based on this
 
-if __name__ == "__main__":
-    main() 
-```
+[GC skew 2](results/pcoa.jpg)
+
+- pca_kmeans.py
+
+different clustering methods...
+
+[kmeans](results/kmeans.png)
+
+integrating it to the pca
+
+[pca_tetra](results/pca_tetra.jpg)
+
+- lasso.R
+
+elastic net regression (testing different alpha values between 0 and 1 / ridge to lasso)
+
+[elastic](results/elastic.jpg)
+
+- correlations.py
+
+pearson's between the features and the replication rates
+
+[correlations](results/features_correlations.png)
+
+- correlations_all.py
+
+cross-correlations between the features, followed by hierarchal clustering
+
+[cross-cor](results/correlated_features.png)
+
+- get_codon_usage.py
+
+get codon usage of all core genes. Generate a black and white image with genes on the y axis, codon usage on the x axis.
+
+Can also generate display of the pixel densities with different normalization methods :
+
+[density](results/density.jpg)
+
+- generate_images.py
+
+calls get_codon_usage.py for every sample, can also generate .npz for neural net training.
+
+[images](results/image.jpg)
+
+generate_images_wide.py does the same but differentiates between codons of different directions (128 pixels wide for 2x64 codons)
