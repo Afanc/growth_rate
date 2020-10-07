@@ -36,35 +36,35 @@ same for dicodon usage
 
 as well as a pcoA based on this
 
-[GC skew 2](results/pcoa.jpg)
+![GC skew 2](results/pcoa.jpg)
 
 - pca_kmeans.py
 
 different clustering methods...
 
-[kmeans](results/kmeans.png)
+![kmeans](results/kmeans.png)
 
 integrating it to the pca
 
-[pca_tetra](results/pca_tetra.jpg)
+![pca_tetra](results/pca_tetra.jpg)
 
 - lasso.R
 
 elastic net regression (testing different alpha values between 0 and 1 / ridge to lasso)
 
-[elastic](results/elastic.jpg)
+![elastic](results/elastic.jpg)
 
 - correlations.py
 
 pearson's between the features and the replication rates
 
-[correlations](results/features_correlations.png)
+![correlations](results/features_correlations.png)
 
 - correlations_all.py
 
 cross-correlations between the features, followed by hierarchal clustering
 
-[cross-cor](results/correlated_features.png)
+![cross-cor](results/correlated_features.png)
 
 - get_codon_usage.py
 
@@ -72,12 +72,12 @@ get codon usage of all core genes. Generate a black and white image with genes o
 
 Can also generate display of the pixel densities with different normalization methods :
 
-[density](results/density.jpg)
+![density](results/density.jpg)
 
 - generate_images.py
 
 calls get_codon_usage.py for every sample, can also generate .npz for neural net training.
 
-[images](results/image.jpg)
+![images](results/image.jpg)
 
 generate_images_wide.py does the same but differentiates between codons of different directions (128 pixels wide for 2x64 codons)
